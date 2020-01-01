@@ -72,6 +72,16 @@
   <project path="system/core" name="crdroidandroid/android_system_core" remote="crdroid" />
   <project path="system/extras/su" name="crdroidandroid/android_system_extras_su" remote="crdroid" />
   <project path="system/sepolicy" name="crdroidandroid/android_system_sepolicy" remote="crdroid" />
+  <remote name="opengapps" fetch="https://github.com/opengapps/"  />
+  <remote name="gitlabo" fetch="https://gitlab.opengapps.org/opengapps/"  />
+
+  <project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
+
+  <project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="gitlabo" />
+
+<!-- arm64 depends on arm -->
+  <project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="gitlabo" />
+  <project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="gitlabo" />
 
   <project path="vendor/addons" name="crdroidandroid/android_vendor_addons" remote="crdroid" />
   <project path="vendor/lineage" name="crdroidandroid/android_vendor_crdroid" remote="crdroid" />
